@@ -1,0 +1,130 @@
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.main-header {
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  background-color: #007bff;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1.5rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  z-index: 1000;
+  overflow: hidden;
+  margin-bottom: 40px;
+  text-decoration: none;
+}
+
+#text-home {
+    text-decoration:none;
+    color:white;
+    font-size: 32px;
+    font-family:'Times New Roman', Times, serif;
+}
+
+#text-home:hover {
+    color: #904E55;
+    transform: scale(1.01);
+    transition: 0.2s ease;
+}
+
+  nav {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+
+footer {
+    background: #222;
+    color: #fff;
+    padding: 15px;
+    text-align: center;
+    margin-top:70px;
+}
+
+.content {
+    flex: 1;
+}
+
+main {
+    flex: 1;
+}
+
+.acciones {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr );
+    gap: 20px;
+    padding: 20px;
+    grid-row-gap: 40px;
+    flex:1;
+}
+
+.item {
+    background: #fff;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.12);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 250px;
+}
+
+.item h3 {
+    margin-top: 0;
+}
+
+.item p {
+    flex-grow: 1;
+    margin: 10px 0 20px;
+ }
+
+.btn-item {
+    background: #007bff;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: bold;
+    transition: 0.2s;
+    max-width:150px;
+}
+
+.btn-item:hover {
+    background: #0056b3;
+    color:white;
+}
+
+.titulo-inicio{
+    align-items:center;
+    text-align:center;
+    padding-bottom: 40px;
+}
+
+.rellenar{
+    min-height: 500px;
+}
