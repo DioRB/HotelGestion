@@ -6,9 +6,12 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using HotelGestion.Models;
+using HotelGestion.Data;
+using Microsoft.AspNetCore.Authorization;
 
 namespace HotelGestion.Controllers
 {
+    [Authorize]
     public class HabitacionesController : Controller
     {
         private readonly GestionHotelContext _context;

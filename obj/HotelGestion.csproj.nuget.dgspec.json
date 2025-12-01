@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ASUS\\Documents\\UNAL\\Semestre_3\\Bases de datos\\Proyecto\\HotelGestion\\HotelGestion.csproj": {}
+    "C:\\Users\\ASUS\\Documents\\UNAL\\Semestre_3\\Bases de datos\\Proyecto\\HotelGestion.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ASUS\\Documents\\UNAL\\Semestre_3\\Bases de datos\\Proyecto\\HotelGestion\\HotelGestion.csproj": {
+    "C:\\Users\\ASUS\\Documents\\UNAL\\Semestre_3\\Bases de datos\\Proyecto\\HotelGestion.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ASUS\\Documents\\UNAL\\Semestre_3\\Bases de datos\\Proyecto\\HotelGestion\\HotelGestion.csproj",
+        "projectUniqueName": "C:\\Users\\ASUS\\Documents\\UNAL\\Semestre_3\\Bases de datos\\Proyecto\\HotelGestion.csproj",
         "projectName": "HotelGestion",
-        "projectPath": "C:\\Users\\ASUS\\Documents\\UNAL\\Semestre_3\\Bases de datos\\Proyecto\\HotelGestion\\HotelGestion.csproj",
+        "projectPath": "C:\\Users\\ASUS\\Documents\\UNAL\\Semestre_3\\Bases de datos\\Proyecto\\HotelGestion.csproj",
         "packagesPath": "C:\\Users\\ASUS\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ASUS\\Documents\\UNAL\\Semestre_3\\Bases de datos\\Proyecto\\HotelGestion\\obj\\",
+        "outputPath": "C:\\Users\\ASUS\\Documents\\UNAL\\Semestre_3\\Bases de datos\\Proyecto\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ASUS\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -40,6 +40,10 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[8.0.0, )"

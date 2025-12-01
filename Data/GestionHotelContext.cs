@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using HotelGestion.Models;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 
-namespace HotelGestion.Models;
+namespace HotelGestion.Data;
 
 public partial class GestionHotelContext : DbContext
 {
@@ -37,8 +39,10 @@ public partial class GestionHotelContext : DbContext
 
     public virtual DbSet<Turno> Turnos { get; set; }
 
+    public virtual DbSet<Usuario> Usuarios { get; set; }
+
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        => optionsBuilder.UseSqlServer("Server=.;Database=GestionHotel;Trusted_Connection=True;TrustServerCertificate=True");
+        => optionsBuilder.UseSqlServer("Server=.;Database=GestionHotel;Trusted_Connection=True;TrustServerCertificate=True;");
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -462,6 +466,20 @@ public partial class GestionHotelContext : DbContext
                 .HasMaxLength(100)
                 .IsUnicode(false)
                 .HasColumnName("TIPO_TURNO");
+        });
+
+        modelBuilder.Entity<Usuario>(entity =>
+        {
+            entity.HasKey(e => e.Id).HasName("PK__Usuario__3214EC0701161F1E");
+
+            entity.ToTable("Usuario");
+
+            entity.Property(e => e.Contraseña)
+                .HasMaxLength(50)
+                .IsUnicode(false);
+            entity.Property(e => e.Nombre)
+                .HasMaxLength(50)
+                .IsUnicode(false);
         });
 
         OnModelCreatingPartial(modelBuilder);
