@@ -1,34 +1,35 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Inicio";
 }
 
 <div class="titulo-inicio">
     <h1> Bienvenido, </h1>
 </div>
 
+
 <div class="acciones">
 
     <div class="item">
         <h3>Clientes</h3>
-        <p>Administra usuarios, roles y permisos del sistema.</p>
+        <p>Administra los clientes.</p>
         <a href="/usuarios" class="btn-item">Ir</a>
     </div>
 
     <div class="item">
-        <h3>Productos</h3>
-        <p>Gestiona los productos, precios y existencias.</p>
+        <h3>Estacionamiento</h3>
+        <p>Gestiona el estacoinamiento.</p>
         <a href="/productos" class="btn-item">Ir</a>
     </div>
 
     <div class="item">
         <h3>Empleados</h3>
-        <p>Consulta reportes y estadísticas del sistema.</p>
+        <p>Consulta y gestiona los empleados.</p>
         <a href="/reportes" class="btn-item">Ir</a>
     </div>
 
     <div class="item">
         <h3>Reservas</h3>
-        <p>Consulta reportes y estadísticas del sistema.</p>
+        <p>Consulta las reservas.</p>
         <a href="/reportes" class="btn-item">Ir</a>
     </div>
 
@@ -36,6 +37,12 @@
         <h3>Habitaciones</h3>
         <p>Consulta reportes y estadísticas del sistema.</p>
         <a asp-controller="Habitaciones" asp-action="Index" class="btn-item">Ir</a>
+    </div>
+
+    <div class="item">
+        <h3>Turnos</h3>
+        <p>Gestiona los turnos de los empleados.</p>
+        <a asp-controller="Turnos" asp-action="Index" class="btn-item">Ir</a>
     </div>
 
 

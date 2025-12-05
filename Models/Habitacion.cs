@@ -7,19 +7,21 @@ public partial class Habitacion
 {
     public int IdHabitacion { get; set; }
 
-    public string Numero { get; set; } = null!;
+    public int? IdEstadia { get; set; }
 
-    public string Piso { get; set; } = null!;
+    public int? IdReserva { get; set; }
+
+    public int Numero { get; set; }
+
+    public int Piso { get; set; }
 
     public string TipoHabitacion { get; set; } = null!;
 
     public int Capacidad { get; set; }
 
-    public string PrecioNoche { get; set; } = null!;
+    public decimal PrecioNoche { get; set; }
 
-    public string EstadoHabitacion { get; set; } = null!;
+    public bool EstadoHabitacion { get; set; }
 
-    public virtual ICollection<Mantenimiento> Mantenimientos { get; set; } = new List<Mantenimiento>();
-
-    public virtual ICollection<Servicio> IdServicios { get; set; } = new List<Servicio>();
+    public virtual Reserva? Reserva { get; set; }
 }

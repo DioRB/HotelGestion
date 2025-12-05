@@ -5,15 +5,17 @@ namespace HotelGestion.Models;
 
 public partial class Estacionamiento
 {
-    public string IdEstacionamiento { get; set; } = null!;
+    public int IdEstacionamiento { get; set; }
+
+    public int? IdEstadia { get; set; }
 
     public int? IdReserva { get; set; }
 
-    public string NumeroAsignado { get; set; } = null!;
+    public int NumeroAsignado { get; set; }
 
-    public string Disponible { get; set; } = null!;
+    public short Disponible { get; set; }
 
     public decimal CostoEstacionamiento { get; set; }
 
-    public virtual Reserva? IdReservaNavigation { get; set; }
+    public virtual Reserva? Reserva { get; set; }
 }

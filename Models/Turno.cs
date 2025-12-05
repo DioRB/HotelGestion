@@ -9,9 +9,9 @@ public partial class Turno
 
     public string TipoTurno { get; set; } = null!;
 
-    public string HoraInicio { get; set; } = null!;
+    public DateTime HoraInicio { get; set; }
 
-    public string HoraFin { get; set; } = null!;
+    public DateTime HoraFin { get; set; }
 
     public virtual ICollection<Empleado> Empleados { get; set; } = new List<Empleado>();
 }

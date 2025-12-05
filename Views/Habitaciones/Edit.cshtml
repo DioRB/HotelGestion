@@ -1,58 +1,61 @@
 @model HotelGestion.Models.Habitacion
 
 @{
-    ViewData["Title"] = "Edit";
+    ViewData["Title"] = "Editar";
 }
 
-<h1>Edit</h1>
 
-<h4>Habitacion</h4>
-<hr />
 <div class="row">
-    <div class="col-md-4">
+    <div class="col-sm-8 offset-sm-2">
+        <h2>Editar Habitación</h2>
         <form asp-action="Edit">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <input type="hidden" asp-for="IdHabitacion" />
-            <div class="form-group">
+            <div class="mb-3">
                 <label asp-for="Numero" class="control-label"></label>
                 <input asp-for="Numero" class="form-control" />
                 <span asp-validation-for="Numero" class="text-danger"></span>
             </div>
-            <div class="form-group">
+            <div class="mb-3">
                 <label asp-for="Piso" class="control-label"></label>
                 <input asp-for="Piso" class="form-control" />
                 <span asp-validation-for="Piso" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="TipoHabitacion" class="control-label"></label>
+            <div class="mb-3">
+                <label asp-for="TipoHabitacion" class="control-label">Tipo de Habitación</label>
                 <input asp-for="TipoHabitacion" class="form-control" />
                 <span asp-validation-for="TipoHabitacion" class="text-danger"></span>
             </div>
-            <div class="form-group">
+            <div class="mb-3">
                 <label asp-for="Capacidad" class="control-label"></label>
                 <input asp-for="Capacidad" class="form-control" />
                 <span asp-validation-for="Capacidad" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="PrecioNoche" class="control-label"></label>
+            <div class="mb-3">
+                <label asp-for="PrecioNoche" class="control-label"> Precio por Noche</label>
                 <input asp-for="PrecioNoche" class="form-control" />
                 <span asp-validation-for="PrecioNoche" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="EstadoHabitacion" class="control-label"></label>
-                <input asp-for="EstadoHabitacion" class="form-control" />
-                <span asp-validation-for="EstadoHabitacion" class="text-danger"></span>
+            <div class="mb-3">
+                <div class="form-check form-switch">
+                    <input asp-for="EstadoHabitacion" class="form-check-input" type="checkbox" role="switch" />
+                    <label asp-for="EstadoHabitacion" class="form-check-label">
+                        Habitación Disponible
+                    </label>
+                </div>
+                <span asp-validation-for="EstadoHabitacion" class="text-danger d-block"></span>
             </div>
-            <div class="form-group">
-                <input type="submit" value="Save" class="btn btn-primary" />
+            <div class="mb-3">
+                <input type="submit" value="Guardar" class="btn btn-success"/>
+            </div>
+            <div>
+                <a asp-action="Index" class="btn btn-warning">Volver</a>
             </div>
         </form>
     </div>
 </div>
 
-<div>
-    <a asp-action="Index">Back to List</a>
-</div>
+
 
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}

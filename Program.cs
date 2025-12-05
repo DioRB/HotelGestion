@@ -7,22 +7,10 @@ using System;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
-builder.Services.AddControllersWithViews();
 
 builder.Services.AddDbContext<GestionHotelContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("CadenaSQL")));
 
-
-builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
-    .AddCookie(options =>
-    {
-        options.LoginPath = "/Account/Login";
-        options.LogoutPath = "/Account/Logout";
-        options.AccessDeniedPath = "/Account/Login";
-    });
-
-builder.Services.AddAuthorization();
 
 builder.Services.AddControllersWithViews();
 
@@ -39,12 +27,11 @@ if (!app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 app.UseStaticFiles();
 app.UseRouting();
-
-app.UseAuthentication();  
+    
 app.UseAuthorization();   
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Account}/{action=Login}/{id?}");
+    pattern: "{controller=Home}/{action=Index}/{id?}");
 
 app.Run();

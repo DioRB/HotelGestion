@@ -11,7 +11,7 @@ public partial class Tarjetum
 
     public int IdTarjeta { get; set; }
 
-    public string NumeroTarjeta { get; set; } = null!;
+    public int NumeroTarjeta { get; set; }
 
     public string TipoTarjeta { get; set; } = null!;
 

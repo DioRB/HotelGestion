@@ -11,17 +11,17 @@ public partial class Factura
 
     public int? IdTipoPago { get; set; }
 
-    public string ValorTotal { get; set; } = null!;
+    public decimal ValorTotal { get; set; }
 
-    public DateOnly FechaPago { get; set; }
+    public DateTime FechaPago { get; set; }
 
     public string EstadoFactura { get; set; } = null!;
+
+    public virtual ICollection<Estadium> Estadia { get; set; } = new List<Estadium>();
 
     public virtual Cliente? IdPersonaNavigation { get; set; }
 
     public virtual Tarjetum? IdTipoPago1 { get; set; }
 
     public virtual Efectivo? IdTipoPagoNavigation { get; set; }
-
-    public virtual ICollection<Servicio> IdServicios { get; set; } = new List<Servicio>();
 }

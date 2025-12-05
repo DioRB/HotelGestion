@@ -1,66 +1,80 @@
 @model IEnumerable<HotelGestion.Models.Habitacion>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Listado Habitaciones";
 }
 
-<h1>Index</h1>
+<div class="row">
+    <div class="col-sm-8 offset-sm-2">
+        <h1>Habitaciones</h1> <br />
+        <p>
+            <a asp-action="Create" class="btn btn-success mb3">Crear Nueva</a>
+        </p> <br />
 
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Numero)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Piso)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.TipoHabitacion)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Capacidad)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.PrecioNoche)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.EstadoHabitacion)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Numero)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Piso)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.TipoHabitacion)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Capacidad)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.PrecioNoche)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.EstadoHabitacion)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.IdHabitacion">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.IdHabitacion">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.IdHabitacion">Delete</a>
-            </td>
-        </tr>
-}
-    </tbody>
-</table>
+        <p>
+            <a asp-action="Buscar" class="btn btn-outline-info">Buscar Habitaciones</a> 
+        </p> <br />
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Numero)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Piso)
+                    </th>
+                    <th>
+                        Tipo Habitación
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Capacidad)
+                    </th>
+                    <th>
+                        Precio por noche
+                    </th>
+                    <th>
+                        Estado de habitación
+                    </th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+        @foreach (var item in Model) {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Numero)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Piso)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TipoHabitacion)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Capacidad)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.PrecioNoche)
+                    </td>
+                    <td>
+                            @if (item.EstadoHabitacion)
+                            {
+                                <span class="badge bg-success">Disponible</span>
+                            }
+                            else
+                            {
+                                <span class="badge bg-danger">Ocupada</span>
+                            }
+
+                    </td>
+                    <td>
+                            <a asp-action="Edit" asp-route-id="@item.IdHabitacion" class="btn btn-primary">Editar</a> |
+                            <a asp-action="Delete" asp-route-id="@item.IdHabitacion" class="btn btn-danger">Borrar</a>
+                    </td>
+                </tr>
+        }
+            </tbody>
+        </table>
+    </div>
+</div>
 <div class="rellenar"></div>

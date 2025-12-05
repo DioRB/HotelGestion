@@ -8,10 +8,11 @@ using Microsoft.EntityFrameworkCore;
 using HotelGestion.Models;
 using HotelGestion.Data;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.Data.SqlClient;
 
 namespace HotelGestion.Controllers
 {
-    [Authorize]
+    
     public class HabitacionesController : Controller
     {
         private readonly GestionHotelContext _context;
@@ -25,6 +26,77 @@ namespace HotelGestion.Controllers
         public async Task<IActionResult> Index()
         {
             return View(await _context.Habitacions.ToListAsync());
+        }
+
+        // GET: Habitaciones/Buscar
+        public async Task<IActionResult> Buscar(int? piso, string? tipo, bool? disponible)
+        {
+            var viewModel = new HabitacionFiltroViewModel();
+
+            // Cargar opciones para los filtros
+            viewModel.PisosDisponibles = await _context.Habitacions
+                .Select(h => h.Piso)
+                .Distinct()
+                .OrderBy(p => p)
+                .ToListAsync();
+
+            viewModel.TiposDisponibles = await _context.Habitacions
+                .Select(h => h.TipoHabitacion)
+                .Distinct()
+                .OrderBy(t => t)
+                .ToListAsync();
+
+            // Si hay filtros aplicados, ejecutar búsqueda
+            if (piso.HasValue || !string.IsNullOrEmpty(tipo) || disponible.HasValue)
+            {
+                viewModel.Piso = piso;
+                viewModel.Tipo = tipo;
+                viewModel.Disponible = disponible;
+
+                // OPCIÓN 1: Consulta SQL cruda (para demostrar conocimientos SQL)
+                var resultados = await BuscarConSQL(piso, tipo, disponible);
+                viewModel.Resultados = resultados;
+            }
+
+            return View(viewModel);
+        }
+
+        // MÉTODO CON SQL CRUDO - Demuestra conocimientos en SQL
+        private async Task<List<Habitacion>> BuscarConSQL(int? piso, string? tipo, bool? disponible)
+        {
+            // Construir la consulta SQL dinámicamente
+            var query = @"
+            SELECT * FROM HABITACION 
+            WHERE 1=1";
+
+            var parametros = new List<SqlParameter>();
+
+            if (piso.HasValue)
+            {
+                query += " AND Piso = @Piso";
+                parametros.Add(new SqlParameter("@Piso", piso.Value));
+            }
+
+            if (!string.IsNullOrEmpty(tipo))
+            {
+                query += " AND TIPO_HABITACION = @Tipo";
+                parametros.Add(new SqlParameter("@Tipo", tipo));
+            }
+
+            if (disponible.HasValue)
+            {
+                query += " AND ESTADO_HABITACION = @Disponible";
+                parametros.Add(new SqlParameter("@Disponible", disponible.Value));
+            }
+
+            query += " ORDER BY Piso, Numero";
+
+            // Ejecutar consulta SQL cruda
+            var resultados = await _context.Habitacions
+                .FromSqlRaw(query, parametros.ToArray())
+                .ToListAsync();
+
+            return resultados;
         }
 
         // GET: Habitaciones/Details/5

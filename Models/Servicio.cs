@@ -9,15 +9,11 @@ public partial class Servicio
 
     public string Descripcion { get; set; } = null!;
 
-    public string Tarifa { get; set; } = null!;
+    public decimal Tarifa { get; set; }
 
     public string NombreServicio { get; set; } = null!;
 
-    public virtual ICollection<Factura> IdFacturas { get; set; } = new List<Factura>();
+    public virtual ICollection<EmpleadoServicio> EmpleadoServicios { get; set; } = new List<EmpleadoServicio>();
 
-    public virtual ICollection<Habitacion> IdHabitacions { get; set; } = new List<Habitacion>();
-
-    public virtual ICollection<Cliente> IdPersonas { get; set; } = new List<Cliente>();
-
-    public virtual ICollection<Empleado> IdPersonasNavigation { get; set; } = new List<Empleado>();
+    public virtual ICollection<EstadiaServicio> EstadiaServicios { get; set; } = new List<EstadiaServicio>();
 }

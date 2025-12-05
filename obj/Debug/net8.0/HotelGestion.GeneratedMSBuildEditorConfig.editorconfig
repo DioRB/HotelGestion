@@ -30,16 +30,16 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/ASUS/Documents/UNAL/Semestre_3/Bases de datos/Proyecto/Views/Habitaciones/Buscar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSGFiaXRhY2lvbmVzXEJ1c2Nhci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/ASUS/Documents/UNAL/Semestre_3/Bases de datos/Proyecto/Views/Habitaciones/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSGFiaXRhY2lvbmVzXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/ASUS/Documents/UNAL/Semestre_3/Bases de datos/Proyecto/Views/Habitaciones/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSGFiaXRhY2lvbmVzXERlbGV0ZS5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/ASUS/Documents/UNAL/Semestre_3/Bases de datos/Proyecto/Views/Habitaciones/Details.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSGFiaXRhY2lvbmVzXERldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/ASUS/Documents/UNAL/Semestre_3/Bases de datos/Proyecto/Views/Habitaciones/Edit.cshtml]
@@ -68,6 +68,22 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/ASUS/Documents/UNAL/Semestre_3/Bases de datos/Proyecto/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ASUS/Documents/UNAL/Semestre_3/Bases de datos/Proyecto/Views/Turnos/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHVybm9zXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ASUS/Documents/UNAL/Semestre_3/Bases de datos/Proyecto/Views/Turnos/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHVybm9zXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ASUS/Documents/UNAL/Semestre_3/Bases de datos/Proyecto/Views/Turnos/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHVybm9zXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ASUS/Documents/UNAL/Semestre_3/Bases de datos/Proyecto/Views/Turnos/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHVybm9zXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/ASUS/Documents/UNAL/Semestre_3/Bases de datos/Proyecto/Views/_ViewImports.cshtml]

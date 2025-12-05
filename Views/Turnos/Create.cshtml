@@ -1,0 +1,42 @@
+@model HotelGestion.Models.Turno
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<div class="row">
+    <div class="col-sm-8 offset-sm-2">
+        <h2>Nuevo Turno</h2>
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="mb-3">
+                <label asp-for="TipoTurno" class="control-label">Tipo Turno</label>
+                <input asp-for="TipoTurno" class="form-control" />
+                <span asp-validation-for="TipoTurno" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label asp-for="HoraInicio" class="control-label">Hora de Inicio</label>
+                <input asp-for="HoraInicio" class="form-control" />
+                <span asp-validation-for="HoraInicio" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label asp-for="HoraFin" class="control-label">Hora de Fin</label>
+                <input asp-for="HoraFin" class="form-control" />
+                <span asp-validation-for="HoraFin" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <input type="submit" value="Crear" class="btn btn-success"/>
+            </div>
+            <div>
+                <a asp-action="Index" class="btn btn-warning">Volver</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="rellenar"></div>
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
