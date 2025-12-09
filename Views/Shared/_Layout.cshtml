@@ -11,23 +11,7 @@
 <body>
     <header class="main-header">
         <a asp-controller="Home" asp-action="Index" id="text-home">Hotel</a>
-    <nav>
-        <a>Iniciar sesión</a>
-        <a>Registrarse</a>
-        <ul class="navbar-nav ms-auto">
-                        @if (User.Identity.IsAuthenticated)
-                        {
-                    <li class="nav-item">
-                        <span class="nav-link">Bienvenido, @User.Identity.Name</span>
-                    </li>
-                    <li class="nav-item">
-                        <form asp-controller="Account" asp-action="Logout" method="post" class="d-inline">
-                            <button type="submit" class="btn btn-link nav-link">Cerrar Sesión</button>
-                        </form>
-                    </li>
-                        }
-        </ul>
-    </nav>
+
     </header>
 
     <div class="wrapper">

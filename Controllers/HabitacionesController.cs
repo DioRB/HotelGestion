@@ -29,7 +29,7 @@ namespace HotelGestion.Controllers
         }
 
         // GET: Habitaciones/Buscar
-        public async Task<IActionResult> Buscar(int? piso, string? tipo, bool? disponible)
+        public async Task<IActionResult> Buscar(int? piso, string? tipo, string? estado)
         {
             var viewModel = new HabitacionFiltroViewModel();
 
@@ -37,7 +37,7 @@ namespace HotelGestion.Controllers
             viewModel.PisosDisponibles = await _context.Habitacions
                 .Select(h => h.Piso)
                 .Distinct()
-                .OrderBy(p => p)
+                .OrderBy(t => t)
                 .ToListAsync();
 
             viewModel.TiposDisponibles = await _context.Habitacions
@@ -46,15 +46,22 @@ namespace HotelGestion.Controllers
                 .OrderBy(t => t)
                 .ToListAsync();
 
-            // Si hay filtros aplicados, ejecutar búsqueda
-            if (piso.HasValue || !string.IsNullOrEmpty(tipo) || disponible.HasValue)
+            viewModel.EstadosDisponibles = await _context.Habitacions
+                .Select(h => h.EstadoHabitacion)
+                .Distinct()
+                .OrderBy(t => t)
+                .ToListAsync();
+
+
+            // Si hay filtros aplicados, ejecutar abúsqueda
+            if (piso.HasValue || !string.IsNullOrEmpty(tipo) || !string.IsNullOrEmpty(estado))
             {
                 viewModel.Piso = piso;
                 viewModel.Tipo = tipo;
-                viewModel.Disponible = disponible;
+                viewModel.Estado = estado;
 
                 // OPCIÓN 1: Consulta SQL cruda (para demostrar conocimientos SQL)
-                var resultados = await BuscarConSQL(piso, tipo, disponible);
+                var resultados = await BuscarConSQL(piso, tipo, estado);
                 viewModel.Resultados = resultados;
             }
 
@@ -62,7 +69,7 @@ namespace HotelGestion.Controllers
         }
 
         // MÉTODO CON SQL CRUDO - Demuestra conocimientos en SQL
-        private async Task<List<Habitacion>> BuscarConSQL(int? piso, string? tipo, bool? disponible)
+        private async Task<List<Habitacion>> BuscarConSQL(int? piso, string? tipo, string? estado)
         {
             // Construir la consulta SQL dinámicamente
             var query = @"
@@ -83,10 +90,10 @@ namespace HotelGestion.Controllers
                 parametros.Add(new SqlParameter("@Tipo", tipo));
             }
 
-            if (disponible.HasValue)
+            if (!string.IsNullOrEmpty(estado))
             {
-                query += " AND ESTADO_HABITACION = @Disponible";
-                parametros.Add(new SqlParameter("@Disponible", disponible.Value));
+                query += " AND ESTADO_HABITACION = @Estado";
+                parametros.Add(new SqlParameter("@Estado", estado));
             }
 
             query += " ORDER BY Piso, Numero";

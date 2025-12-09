@@ -12,6 +12,4 @@ public partial class Turno
     public DateTime HoraInicio { get; set; }
 
     public DateTime HoraFin { get; set; }
-
-    public virtual ICollection<Empleado> Empleados { get; set; } = new List<Empleado>();
 }

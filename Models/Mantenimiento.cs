@@ -16,6 +16,4 @@ public partial class Mantenimiento
     public string Motivo { get; set; } = null!;
 
     public decimal CostoMantenimiento { get; set; }
-
-    public virtual Empleado? IdPersonaNavigation { get; set; }
 }

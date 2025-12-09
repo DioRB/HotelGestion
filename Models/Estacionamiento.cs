@@ -7,15 +7,11 @@ public partial class Estacionamiento
 {
     public int IdEstacionamiento { get; set; }
 
-    public int? IdEstadia { get; set; }
-
     public int? IdReserva { get; set; }
 
     public int NumeroAsignado { get; set; }
 
-    public short Disponible { get; set; }
+    public string Disponible { get; set; } = null!;
 
     public decimal CostoEstacionamiento { get; set; }
-
-    public virtual Reserva? Reserva { get; set; }
 }

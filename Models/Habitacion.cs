@@ -7,11 +7,9 @@ public partial class Habitacion
 {
     public int IdHabitacion { get; set; }
 
-    public int? IdEstadia { get; set; }
-
     public int? IdReserva { get; set; }
 
-    public int Numero { get; set; }
+    public string Numero { get; set; } = null!;
 
     public int Piso { get; set; }
 
@@ -21,7 +19,5 @@ public partial class Habitacion
 
     public decimal PrecioNoche { get; set; }
 
-    public bool EstadoHabitacion { get; set; }
-
-    public virtual Reserva? Reserva { get; set; }
+    public string EstadoHabitacion { get; set; } = null!;
 }

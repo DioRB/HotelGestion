@@ -12,8 +12,4 @@ public partial class Servicio
     public decimal Tarifa { get; set; }
 
     public string NombreServicio { get; set; } = null!;
-
-    public virtual ICollection<EmpleadoServicio> EmpleadoServicios { get; set; } = new List<EmpleadoServicio>();
-
-    public virtual ICollection<EstadiaServicio> EstadiaServicios { get; set; } = new List<EstadiaServicio>();
 }

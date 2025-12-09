@@ -10,8 +10,4 @@ public partial class EmpleadoServicio
     public int IdServicio { get; set; }
 
     public DateTime Fecha { get; set; }
-
-    public virtual Empleado IdPersonaNavigation { get; set; } = null!;
-
-    public virtual Servicio IdServicioNavigation { get; set; } = null!;
 }

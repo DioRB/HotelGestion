@@ -9,9 +9,5 @@ public partial class EstadiaServicio
 
     public int IdServicio { get; set; }
 
-    public DateTime? FechaServicio { get; set; }
-
-    public virtual Estadium IdEstadiaNavigation { get; set; } = null!;
-
-    public virtual Servicio IdServicioNavigation { get; set; } = null!;
+    public DateTime FechaServicio { get; set; }
 }

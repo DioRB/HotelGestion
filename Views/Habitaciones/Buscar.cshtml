@@ -41,11 +41,13 @@
 
                 <div class="col-md-4">
                     <div class="form-group">
-                        <label>Disponibilidad</label>
-                        <select name="disponible" class="form-control">
+                        <label>Estado</label>
+                        <select name="estado" class="form-control">
                             <option value="">-- Todas --</option>
-                            <option value="true" selected="@(Model.Disponible == true)">Disponibles</option>
-                            <option value="false" selected="@(Model.Disponible == false)">Ocupadas</option>
+                            @foreach (var e in Model.EstadosDisponibles)
+                            {
+                                <option value="@e" selected="@(Model.Estado == e)">@e</option>
+                            }
                         </select>
                     </div>
                 </div>
@@ -93,16 +95,7 @@
                             <td>@habitacion.TipoHabitacion</td>
                             <td>@habitacion.Capacidad</td>
                             <td>$@habitacion.PrecioNoche.ToString("N2")</td>
-                            <td>
-                                @if (habitacion.EstadoHabitacion)
-                                {
-                                    <span class="badge bg-success">Disponible</span>
-                                }
-                                else
-                                {
-                                    <span class="badge bg-danger">Ocupada</span>
-                                }
-                            </td>
+                            <td>@habitacion.EstadoHabitacion</td>
                             <td>
                                 <a asp-action="Edit" asp-route-id="@habitacion.IdHabitacion" class="btn btn-sm btn-warning">
                                     <i class="fas fa-edit"></i> Editar
@@ -115,17 +108,6 @@
         </div>
     </div>
 }
-else if (Model.Piso.HasValue || !string.IsNullOrEmpty(Model.Tipo) || Model.Disponible.HasValue)
-{
-    <div class="alert alert-warning">
-        <i class="fas fa-info-circle"></i> No se encontraron habitaciones con los filtros seleccionados.
-    </div>
-}
-else
-{
-    <div class="alert alert-info">
-        <i class="fas fa-info-circle"></i> Selecciona los filtros y presiona "Buscar" para ver resultados.
-    </div>
-}
+
 
 <div class="rellenar"></div>

@@ -3,34 +3,16 @@
 }
 
 <div class="titulo-inicio">
-    <h1> Bienvenido, </h1>
+    <h1> Bienvenido</h1>
 </div>
 
 
 <div class="acciones">
 
     <div class="item">
-        <h3>Clientes</h3>
-        <p>Administra los clientes.</p>
-        <a href="/usuarios" class="btn-item">Ir</a>
-    </div>
-
-    <div class="item">
-        <h3>Estacionamiento</h3>
-        <p>Gestiona el estacoinamiento.</p>
-        <a href="/productos" class="btn-item">Ir</a>
-    </div>
-
-    <div class="item">
         <h3>Empleados</h3>
         <p>Consulta y gestiona los empleados.</p>
-        <a href="/reportes" class="btn-item">Ir</a>
-    </div>
-
-    <div class="item">
-        <h3>Reservas</h3>
-        <p>Consulta las reservas.</p>
-        <a href="/reportes" class="btn-item">Ir</a>
+        <a asp-controller="Empleados" asp-action="Index" class="btn-item">Ir</a>
     </div>
 
     <div class="item">
@@ -44,6 +26,5 @@
         <p>Gestiona los turnos de los empleados.</p>
         <a asp-controller="Turnos" asp-action="Index" class="btn-item">Ir</a>
     </div>
-
 
 </div>
