@@ -17,99 +17,11 @@ build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = HotelGestion
 build_property.RootNamespace = HotelGestion
-build_property.ProjectDir = C:\Users\ASUS\Documents\UNAL\Semestre_3\Bases de datos\Proyecto\
+build_property.ProjectDir = C:\Users\ASUS\Documents\UNAL\Semestre_3\Bases de datos\Proyecto\HotelGestion\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\ASUS\Documents\UNAL\Semestre_3\Bases de datos\Proyecto
+build_property.MSBuildProjectDirectory = C:\Users\ASUS\Documents\UNAL\Semestre_3\Bases de datos\Proyecto\HotelGestion
 build_property._RazorSourceGeneratorDebug = 
-
-[C:/Users/ASUS/Documents/UNAL/Semestre_3/Bases de datos/Proyecto/Views/Account/Login.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxMb2dpbi5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/ASUS/Documents/UNAL/Semestre_3/Bases de datos/Proyecto/Views/Empleados/Create.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbGVhZG9zXENyZWF0ZS5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/ASUS/Documents/UNAL/Semestre_3/Bases de datos/Proyecto/Views/Empleados/Delete.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbGVhZG9zXERlbGV0ZS5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/ASUS/Documents/UNAL/Semestre_3/Bases de datos/Proyecto/Views/Empleados/Edit.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbGVhZG9zXEVkaXQuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/ASUS/Documents/UNAL/Semestre_3/Bases de datos/Proyecto/Views/Empleados/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbGVhZG9zXEluZGV4LmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/ASUS/Documents/UNAL/Semestre_3/Bases de datos/Proyecto/Views/Habitaciones/Buscar.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSGFiaXRhY2lvbmVzXEJ1c2Nhci5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/ASUS/Documents/UNAL/Semestre_3/Bases de datos/Proyecto/Views/Habitaciones/Create.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSGFiaXRhY2lvbmVzXENyZWF0ZS5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/ASUS/Documents/UNAL/Semestre_3/Bases de datos/Proyecto/Views/Habitaciones/Delete.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSGFiaXRhY2lvbmVzXERlbGV0ZS5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/ASUS/Documents/UNAL/Semestre_3/Bases de datos/Proyecto/Views/Habitaciones/Edit.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSGFiaXRhY2lvbmVzXEVkaXQuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/ASUS/Documents/UNAL/Semestre_3/Bases de datos/Proyecto/Views/Habitaciones/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSGFiaXRhY2lvbmVzXEluZGV4LmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/ASUS/Documents/UNAL/Semestre_3/Bases de datos/Proyecto/Views/Home/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/ASUS/Documents/UNAL/Semestre_3/Bases de datos/Proyecto/Views/Home/Privacy.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/ASUS/Documents/UNAL/Semestre_3/Bases de datos/Proyecto/Views/Inicio/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5pY2lvXEluZGV4LmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/ASUS/Documents/UNAL/Semestre_3/Bases de datos/Proyecto/Views/Shared/Error.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/ASUS/Documents/UNAL/Semestre_3/Bases de datos/Proyecto/Views/Shared/_ValidationScriptsPartial.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/ASUS/Documents/UNAL/Semestre_3/Bases de datos/Proyecto/Views/Turnos/Create.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHVybm9zXENyZWF0ZS5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/ASUS/Documents/UNAL/Semestre_3/Bases de datos/Proyecto/Views/Turnos/Delete.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHVybm9zXERlbGV0ZS5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/ASUS/Documents/UNAL/Semestre_3/Bases de datos/Proyecto/Views/Turnos/Edit.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHVybm9zXEVkaXQuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/ASUS/Documents/UNAL/Semestre_3/Bases de datos/Proyecto/Views/Turnos/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHVybm9zXEluZGV4LmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/ASUS/Documents/UNAL/Semestre_3/Bases de datos/Proyecto/Views/_ViewImports.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/ASUS/Documents/UNAL/Semestre_3/Bases de datos/Proyecto/Views/_ViewStart.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/ASUS/Documents/UNAL/Semestre_3/Bases de datos/Proyecto/Views/Shared/_Layout.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = b-jv6t5robn6

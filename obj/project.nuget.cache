@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "tOa7KJfF2o8jiejm6uozxJlIX54XlZ9vWV99M3RO5QoDS6OzV7cDDE0iB49kt7pgFNSpGFxSzb3uFuSHwr0uWg==",
+  "dgSpecHash": "XbKwoCh3upYDRWikizdeSPs9N/+wbAEb3G3CYSf/AGmPaZRH8siQoKLQzVsnufFrUp907s4nt2tgHJrfKwBl2g==",
   "success": true,
-  "projectFilePath": "C:\\Users\\ASUS\\Documents\\UNAL\\Semestre_3\\Bases de datos\\Proyecto\\HotelGestion.csproj",
+  "projectFilePath": "C:\\Users\\ASUS\\Documents\\UNAL\\Semestre_3\\Bases de datos\\Proyecto\\HotelGestion\\HotelGestion.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ASUS\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\ASUS\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",

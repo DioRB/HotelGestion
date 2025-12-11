@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ASUS\\Documents\\UNAL\\Semestre_3\\Bases de datos\\Proyecto\\HotelGestion.csproj": {}
+    "C:\\Users\\ASUS\\Documents\\UNAL\\Semestre_3\\Bases de datos\\Proyecto\\HotelGestion\\HotelGestion.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ASUS\\Documents\\UNAL\\Semestre_3\\Bases de datos\\Proyecto\\HotelGestion.csproj": {
+    "C:\\Users\\ASUS\\Documents\\UNAL\\Semestre_3\\Bases de datos\\Proyecto\\HotelGestion\\HotelGestion.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ASUS\\Documents\\UNAL\\Semestre_3\\Bases de datos\\Proyecto\\HotelGestion.csproj",
+        "projectUniqueName": "C:\\Users\\ASUS\\Documents\\UNAL\\Semestre_3\\Bases de datos\\Proyecto\\HotelGestion\\HotelGestion.csproj",
         "projectName": "HotelGestion",
-        "projectPath": "C:\\Users\\ASUS\\Documents\\UNAL\\Semestre_3\\Bases de datos\\Proyecto\\HotelGestion.csproj",
+        "projectPath": "C:\\Users\\ASUS\\Documents\\UNAL\\Semestre_3\\Bases de datos\\Proyecto\\HotelGestion\\HotelGestion.csproj",
         "packagesPath": "C:\\Users\\ASUS\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ASUS\\Documents\\UNAL\\Semestre_3\\Bases de datos\\Proyecto\\obj\\",
+        "outputPath": "C:\\Users\\ASUS\\Documents\\UNAL\\Semestre_3\\Bases de datos\\Proyecto\\HotelGestion\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ASUS\\AppData\\Roaming\\NuGet\\NuGet.Config",

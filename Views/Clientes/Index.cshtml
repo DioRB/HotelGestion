@@ -1,0 +1,73 @@
+@model IEnumerable<HotelGestion.Models.Cliente>
+
+@{
+    ViewData["Title"] = "Listado CLientes";
+}
+
+<div class="row">
+    <div class="col-sm-10 offset-sm-1">
+        <h1>Clientes</h1> <br />
+        <p>
+            <a asp-action="Create" class="btn btn-success mb3">Crear Nuevo</a>
+        </p>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Documento)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Nombre)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Apellido)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Telefono)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Correo)
+                    </th>
+                    <th>
+                        Tipo de Cliente
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Pais)
+                    </th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+        @foreach (var item in Model) {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Documento)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Nombre)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Apellido)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Telefono)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Correo)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TipoCliente)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Pais)
+                    </td>
+                    <td>
+                            <a asp-action="Edit" asp-route-id="@item.IdPersona" class="btn btn-primary">Editar</a> |
+                            <a asp-action="Delete" asp-route-id="@item.IdPersona" class="btn btn-danger">Borrar</a>
+                    </td>
+                </tr>
+        }
+            </tbody>
+        </table>
+    </div>
+</div>

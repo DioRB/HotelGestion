@@ -504,3 +504,5 @@ C:\Users\ASUS\Documents\UNAL\Semestre_3\Bases de datos\Proyecto\obj\Debug\net8.0
 C:\Users\ASUS\Documents\UNAL\Semestre_3\Bases de datos\Proyecto\obj\Debug\net8.0\ref\HotelGestion.dll
 C:\Users\ASUS\Documents\UNAL\Semestre_3\Bases de datos\Proyecto\bin\Debug\net8.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
 C:\Users\ASUS\Documents\UNAL\Semestre_3\Bases de datos\Proyecto\obj\Debug\net8.0\HotelGestion.csproj.CopyComplete
+C:\Users\ASUS\Documents\UNAL\Semestre_3\Bases de datos\Proyecto\HotelGestion\bin\Debug\net8.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\Users\ASUS\Documents\UNAL\Semestre_3\Bases de datos\Proyecto\HotelGestion\obj\Debug\net8.0\HotelGestion.sourcelink.json
