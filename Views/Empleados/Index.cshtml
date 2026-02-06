@@ -1,0 +1,102 @@
+@model IEnumerable<HotelGestion.Models.Empleado>
+@{
+    ViewData["Title"] = "Empleados";
+}
+
+<div class="container-fluid mt-4">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h2>
+            <i class="fas fa-users"></i> Gestión de Empleados
+        </h2>
+        <a asp-action="Create" class="btn btn-primary btn-lg">
+            <i class="fas fa-plus"></i> Nuevo Empleado
+        </a>
+    </div>
+
+    @if (TempData["Mensaje"] != null)
+    {
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+            <i class="fas fa-check-circle"></i> @TempData["Mensaje"]
+            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+        </div>
+    }
+
+    <div class="card shadow">
+        <div class="card-body">
+            @if (Model.Any())
+            {
+                <div class="table-responsive">
+                    <table class="table table-hover table-striped align-middle">
+                        <thead class="table-dark">
+                            <tr>
+								<th>Documento</th>
+								<th>Nombre Completo</th>
+                                <th>Tipo Cliente</th>
+                                <th>Turno</th>
+                                <th>Teléfono</th>
+                                <th>Correo</th>
+                                <th>Sexo</th>
+                                <th class="text-center">Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var empleado in Model)
+                            {
+                                <tr>
+									<td>
+										<i class="fas fa-id-card text-muted"></i> @empleado.Documento
+									</td>
+									<td>
+                                        <strong>
+                                            <i class="fas fa-user text-muted"></i>
+                                            @empleado.Nombre @empleado.Apellido
+                                        </strong>
+                                    </td>
+                                    <td>
+                                        <span class="badge bg-info">@empleado.Cargo</span>
+                                    </td>
+                                    <td>
+                                        <i class="fas fa-globe text-muted"></i> Turno @empleado.IdTurno
+                                    </td>
+                                    <td>
+                                        <i class="fas fa-phone text-muted"></i> @empleado.Telefono
+                                    </td>
+                                    <td>
+                                        <i class="fas fa-envelope text-muted"></i>
+                                        <small>@empleado.Correo</small>
+                                    </td>
+                                    <td>@empleado.Sexo</td>
+                                    <td class="text-center">
+                                        <div class="btn-group" role="group">
+                                            <a asp-action="Edit" asp-route-id="@empleado.IdPersona" class="btn btn-primary">Editar</a> |
+                                            <a asp-action="Delete" asp-route-id="@empleado.IdPersona" class="btn btn-danger">Borrar</a>
+                                        </div>
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="mt-3 text-muted">
+                    <i class="fas fa-info-circle"></i> Total de clientes: <strong>@Model.Count()</strong>
+                </div>
+                <div class="mt-3 text-muted">
+                    <i class="fas fa-info-circle"></i> Total de clientes hombres: <strong>@Model.Count(c => c.Sexo == "Hombre")</strong>
+                </div>
+                <div class="mt-3 text-muted">
+                    <i class="fas fa-info-circle"></i> Total de clientes hombres: <strong>@Model.Count(c => c.Sexo == "Mujer")</strong>
+                </div>
+            }
+            else
+            {
+                <div class="alert alert-info text-center">
+                    <i class="fas fa-info-circle fa-2x mb-3"></i>
+                    <p class="mb-0">No hay empleados registrados. <a asp-action="Create" class="alert-link">Crear el primero</a></p>
+                </div>
+            }
+        </div>
+    </div>
+</div>
+
+<div class="rellenar"></div>

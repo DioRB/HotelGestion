@@ -1,0 +1,32 @@
+﻿@{
+    ViewData["Title"] = "Inicio";
+}
+
+<div class="titulo-inicio">
+    <h1> Bienvenido</h1>
+</div>
+
+
+<div class="acciones">
+
+    <div class="item">
+        <h3>Empleados</h3>
+        <p>Consulta y gestiona los empleados.</p>
+        <a asp-controller="Empleados" asp-action="Index" class="btn-item">Ir</a>
+    </div>
+
+    <div class="item">
+        <h3>Turnos</h3>
+        <p>Gestiona los turnos de los empleados.</p>
+        <a asp-controller="Turnos" asp-action="Index" class="btn-item">Ir</a>
+    </div>
+
+    <div class="item">
+        <h3>Clientes</h3>
+        <p>Administra los perfiles de los clientes.</p>
+        <a asp-controller="Clientes" asp-action="Index" class="btn-item">Ir</a>
+    </div>
+
+</div>
+
+<div class="rellenar"></div>
